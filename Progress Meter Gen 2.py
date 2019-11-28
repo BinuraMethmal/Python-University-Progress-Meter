@@ -13,9 +13,28 @@ TotalEnters =[]
 
 def Checker(): # Progress checking Funtion
 
-    Credits = int(input("Enter Your Credits to The System : "))
-    Deffer=int(input("Enter Your Differ value to The System : "))
-    Fail=int(input("Enter your Fail values to The System : "))
+    while True: # Input Credits Value and Check is it in integer data type
+        try:
+            Credits = int(input("Enter Your Credits to The System : "))
+            break
+        except ValueError:
+            print(" Integer required.")
+
+    while True: # Input Deffer Value and Check is it in integer data type
+        try:
+            Deffer=int(input("Enter Your Differ value to The System : "))
+            break
+        except ValueError:
+            print(" Integer required.")
+
+    while True: # Input Fail Value and Check is it in integer data type
+        try:
+            Fail=int(input("Enter your Fail values to The System : "))
+            break
+        except ValueError:
+            print(" Integer required.")
+    
+    
 
     Total = Credits+Deffer+Fail # Total of the Marks
 
