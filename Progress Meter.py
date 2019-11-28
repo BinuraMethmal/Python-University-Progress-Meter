@@ -2,6 +2,7 @@
 Credits=0 # Variable 01
 Deffer=0 # Variable 02
 Fail=0 # Variable 03
+control=0
 
 CreditsRanges=[0,20,40,60,80,100,120] # Credit Limitation List
 Progress=[] # Progress Outcommers list
@@ -12,9 +13,20 @@ TotalEnters =[]
 
 def Checker(): # Progress checking Funtion
 
-    Credits= int(input("Enter Your Credits to The System : "))
-    Deffer=int(input("Enter Your Differ value to The System : "))
-    Fail=int(input("Enter your Fail values to The System : "))
+    Credits = input("Enter Your Credits to The System : ")
+    if not type(Credits) is int:
+        print("\n")
+        raise TypeError("Only integers are allowed")
+
+    Deffer=input("Enter Your Differ value to The System : ")
+    if not type(Deffer) is int:
+        print("\n")
+        raise TypeError("Only integers are allowed")
+
+    Fail=input("Enter your Fail values to The System : ")
+    if not type(Fail) is int:
+        print("\n")
+        raise TypeError("Only integers are allowed")
 
     Total = Credits+Deffer+Fail # Total of the Marks
 
