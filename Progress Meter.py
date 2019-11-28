@@ -9,23 +9,22 @@ Progress=[] # Progress Outcommers list
 Trailing=[] # Module Trailing List
 Reterver=[] # Module Retervers list
 Exclude=[] # Excluded student List
-TotalEnters =[]
+TotalEnters =[] 
 
 def Checker(): # Progress checking Funtion
 
     Credits = input("Enter Your Credits to The System : ")
-    if not type(Credits) is int:
-        print("\n")
+
+    if not type(Credits) is int: # Check Credit Value is in Integers Datatypes
         raise TypeError("Only integers are allowed")
 
     Deffer=input("Enter Your Differ value to The System : ")
-    if not type(Deffer) is int:
-        print("\n")
+    if not type(Deffer) is int: # Check Deffer Value is in Integers Datatype
         raise TypeError("Only integers are allowed")
 
     Fail=input("Enter your Fail values to The System : ")
-    if not type(Fail) is int:
-        print("\n")
+
+    if not type(Fail) is int: # Check Fail Value is in Integer Data type
         raise TypeError("Only integers are allowed")
 
     Total = Credits+Deffer+Fail # Total of the Marks
